@@ -33,9 +33,7 @@ export default function Home() {
             </div>
 
             {/* 底部文案 */}
-            <footer className="text-gray-600 text-center my-8">
-                本项目为 星球「码农会锁」第8个实战项目 https://gaga.plus @小傅哥
-            </footer>
+
         </div>
     );
 }
