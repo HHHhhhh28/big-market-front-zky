@@ -3,7 +3,8 @@
 import {LuckyWheelPage} from "@/app/pages/lucky/lucky-wheel-page";
 import {LuckyGridPage} from "@/app/pages/lucky/lucky-grid-page";
 import dynamic from "next/dynamic";
-import {useState} from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const StrategyArmoryButton = dynamic(async () => (await import("./components/StrategyArmory")).StrategyArmory)
 const StrategyRuleWeightButton = dynamic(async () => (await import("./components/StrategyRuleWeight")).StrategyRuleWeight)
@@ -14,9 +15,23 @@ export default function Home() {
 
     const [refresh, setRefresh] = useState(0);
 
+    const searchParams = useSearchParams();
+    const router = useRouter();
+
     const handleRefresh = () => {
         setRefresh(refresh + 1)
     };
+
+    useEffect(() => {
+        const userId = searchParams.get('userId');
+        const activityId = searchParams.get('activityId');
+
+        if (!userId || !activityId) {
+            router.push('/?userId=zhangsan&activityId=100301', {
+                replace: true
+            });
+        }
+    }, [searchParams, router]);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-[#e7305e]"
