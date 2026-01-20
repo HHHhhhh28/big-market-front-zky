@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '小傅哥 - 抽奖 - 大营销平台展示',
-  description: '星球「码农会锁」第8个实战项目',
+  title: '抽奖大营销',
+  description: '抽奖大营销',
 }
 
 export default function RootLayout({

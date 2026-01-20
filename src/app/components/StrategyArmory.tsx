@@ -5,7 +5,7 @@ export function StrategyArmory() {
         const queryParams = new URLSearchParams(window.location.search);
         const activityId = Number(queryParams.get('activityId'));
         if (!activityId){
-            window.alert("请在请求地址中，配置 activityId 值，如：http://localhost:3000/?userId=xiaofuge&activityId=100301")
+            window.alert("请在请求地址中，配置 activityId 值，如：http://localhost:3000/?userId=zhangsan&activityId=100301")
             return;
         }
         const res = await activityStrategyArmory(activityId);
