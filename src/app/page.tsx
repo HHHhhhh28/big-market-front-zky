@@ -53,11 +53,7 @@ export default function Home() {
                 <StrategyRuleWeightButton refresh={refresh}/>
             </div>
 
-            {/* 底部文案 */}
-            <footer className="text-gray-600 text-center my-8" style={{color: "white"}}>
-                本项目为 星球「码农会锁」第8个实战项目 <a href='https://gaga.plus'
-                                                        target='_blank' color={"#0092ff"}>https://gaga.plus</a> @小傅哥
-            </footer>
+
         </div>
     );
 }
