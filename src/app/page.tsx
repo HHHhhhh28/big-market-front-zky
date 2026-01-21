@@ -28,7 +28,7 @@ export default function Home() {
 
         if (!userId || !activityId) {
             router.push('/?userId=zhangsan&activityId=100301', {
-                replace: true
+                next: { replace: true } // 正确：replace 放在 next 子对象中
             });
         }
     }, [searchParams, router]);
